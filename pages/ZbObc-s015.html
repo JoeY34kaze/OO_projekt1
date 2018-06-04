@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8"/>        <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/xrange.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+h2 {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#btn_seje {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+p {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 12px;}
+}
+</style></head>
+
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="./DruzPolZb-s001.html">"DruzPolZb-s001"</a>
+<a href="./ZbObc-s001.html">"ZbObc-s001"</a>
+<a href="./ZbZdruDel-s001.html">"ZbZdruDel-s001"</a>
+<a href="./VsiZbor-d001.html">"VsiZbor-d001"</a>
+<a href="./VsiZbor-s001.html">"VsiZbor-s001"</a>
+<a href="./VsiZbor-s002.html">"VsiZbor-s002"</a>
+<a href="./DruzPolZb-s002.html">"DruzPolZb-s002"</a>
+<a href="./VsiZbor-s003.html">"VsiZbor-s003"</a>
+<a href="./ZbObc-s002.html">"ZbObc-s002"</a>
+<a href="./ZbZdruDel-s002.html">"ZbZdruDel-s002"</a>
+<a href="./DruzPolZb-s003.html">"DruzPolZb-s003"</a>
+<a href="./VsiZbor-s004.html">"VsiZbor-s004"</a>
+<a href="./VsiZbor-z002.html">"VsiZbor-z002"</a>
+<a href="./ZbObc-s003.html">"ZbObc-s003"</a>
+<a href="./ZbZdruDel-s003.html">"ZbZdruDel-s003"</a>
+<a href="./VsiZbor-z001.html">"VsiZbor-z001"</a>
+<a href="./DruzPolZb-s004.html">"DruzPolZb-s004"</a>
+<a href="./VsiZbor-z003.html">"VsiZbor-z003"</a>
+<a href="./ZbObc-s004.html">"ZbObc-s004"</a>
+<a href="./ZbZdruDel-s004.html">"ZbZdruDel-s004"</a>
+<a href="./VsiZbor-s005.html">"VsiZbor-s005"</a>
+<a href="./VsiZbor-s006.html">"VsiZbor-s006"</a>
+<a href="./DruzPolZb-s005.html">"DruzPolZb-s005"</a>
+<a href="./ZbObc-s005.html">"ZbObc-s005"</a>
+<a href="./ZbZdruDel-s005.html">"ZbZdruDel-s005"</a>
+<a href="./VsiZbor-d002.html">"VsiZbor-d002"</a>
+<a href="./VsiZbor-s007.html">"VsiZbor-s007"</a>
+<a href="./VsiZbor-s008.html">"VsiZbor-s008"</a>
+<a href="./ZbZdruDel-s006.html">"ZbZdruDel-s006"</a>
+<a href="./DruzPolZb-s006.html">"DruzPolZb-s006"</a>
+<a href="./VsiZbor-z004.html">"VsiZbor-z004"</a>
+<a href="./ZbObc-s006.html">"ZbObc-s006"</a>
+<a href="./ZbZdruDel-s007.html">"ZbZdruDel-s007"</a>
+<a href="./DruzPolZb-s007.html">"DruzPolZb-s007"</a>
+<a href="./VsiZbor-s009.html">"VsiZbor-s009"</a>
+<a href="./ZbObc-s007.html">"ZbObc-s007"</a>
+<a href="./ZbZdruDel-s008.html">"ZbZdruDel-s008"</a>
+<a href="./VsiZbor-d003.html">"VsiZbor-d003"</a>
+<a href="./VsiZbor-z005.html">"VsiZbor-z005"</a>
+<a href="./ZbZdruDel-s009.html">"ZbZdruDel-s009"</a>
+<a href="./DruzPolZb-s008.html">"DruzPolZb-s008"</a>
+<a href="./VsiZbor-z006.html">"VsiZbor-z006"</a>
+<a href="./ZbObc-s008.html">"ZbObc-s008"</a>
+<a href="./ZbZdruDel-s010.html">"ZbZdruDel-s010"</a>
+<a href="./VsiZbor-s010.html">"VsiZbor-s010"</a>
+<a href="./DruzPolZb-s009.html">"DruzPolZb-s009"</a>
+<a href="./ZbObc-s009.html">"ZbObc-s009"</a>
+<a href="./ZbZdruDel-s011.html">"ZbZdruDel-s011"</a>
+<a href="./VsiZbor-s011.html">"VsiZbor-s011"</a>
+<a href="./DruzPolZb-s010.html">"DruzPolZb-s010"</a>
+<a href="./ZbObc-s010.html">"ZbObc-s010"</a>
+<a href="./ZbZdruDel-s012.html">"ZbZdruDel-s012"</a>
+<a href="./VsiZbor-s012.html">"VsiZbor-s012"</a>
+<a href="./VsiZbor-z007.html">"VsiZbor-z007"</a>
+<a href="./VsiZbor-sl001.html">"VsiZbor-sl001"</a>
+<a href="./VsiZbor-s013.html">"VsiZbor-s013"</a>
+<a href="./DruzPolZb-s011.html">"DruzPolZb-s011"</a>
+<a href="./VsiZbor-s014.html">"VsiZbor-s014"</a>
+<a href="./ZbObc-s011.html">"ZbObc-s011"</a>
+<a href="./ZbZdruDel-s013.html">"ZbZdruDel-s013"</a>
+<a href="./VsiZbor-z008.html">"VsiZbor-z008"</a>
+<a href="./DruzPolZb-s012.html">"DruzPolZb-s012"</a>
+<a href="./VsiZbor-s015.html">"VsiZbor-s015"</a>
+<a href="./ZbObc-s012.html">"ZbObc-s012"</a>
+<a href="./ZbZdruDel-s014.html">"ZbZdruDel-s014"</a>
+<a href="./DruzPolZb-s013.html">"DruzPolZb-s013"</a>
+<a href="./VsiZbor-z009.html">"VsiZbor-z009"</a>
+<a href="./ZbObc-s013.html">"ZbObc-s013"</a>
+<a href="./ZbZdruDel-s015.html">"ZbZdruDel-s015"</a>
+<a href="./VsiZbor-d004.html">"VsiZbor-d004"</a>
+<a href="./VsiZbor-s016.html">"VsiZbor-s016"</a>
+<a href="./DruzPolZb-s014.html">"DruzPolZb-s014"</a>
+<a href="./ZbObc-s014.html">"ZbObc-s014"</a>
+<a href="./ZbZdruDel-s016.html">"ZbZdruDel-s016"</a>
+<a href="./DruzPolZb-s015.html">"DruzPolZb-s015"</a>
+<a href="./VsiZbor-z010.html">"VsiZbor-z010"</a>
+<a href="./ZbObc-s015.html">"ZbObc-s015"</a>
+<a href="./ZbZdruDel-s017.html">"ZbZdruDel-s017"</a>
+<a href="./DruzPolZb-s016.html">"DruzPolZb-s016"</a>
+<a href="./VsiZbor-z011.html">"VsiZbor-z011"</a>
+<a href="./ZbObc-s016.html">"ZbObc-s016"</a>
+<a href="./ZbZdruDel-s018.html">"ZbZdruDel-s018"</a>
+<a href="./VsiZbor-s017.html">"VsiZbor-s017"</a>
+<a href="./VsiZbor-d005.html">"VsiZbor-d005"</a>
+<a href="./DruzPolZb-s017.html">"DruzPolZb-s017"</a>
+<a href="./VsiZbor-d006.html">"VsiZbor-d006"</a>
+<a href="./ZbObc-s017.html">"ZbObc-s017"</a>
+<a href="./ZbZdruDel-s019.html">"ZbZdruDel-s019"</a>
+<a href="./VsiZbor-d007.html">"VsiZbor-d007"</a>
+<a href="./DruzPolZb-s018.html">"DruzPolZb-s018"</a>
+<a href="./VsiZbor-s018.html">"VsiZbor-s018"</a>
+<a href="./VsiZbor-z012.html">"VsiZbor-z012"</a>
+<a href="./ZbObc-s018.html">"ZbObc-s018"</a>
+<a href="./ZbZdruDel-s020.html">"ZbZdruDel-s020"</a>
+<a href="./DruzPolZb-s019.html">"DruzPolZb-s019"</a>
+<a href="./VsiZbor-z013.html">"VsiZbor-z013"</a>
+<a href="./ZbObc-s019.html">"ZbObc-s019"</a>
+<a href="./ZbZdruDel-s021.html">"ZbZdruDel-s021"</a>
+<a href="./ZbZdruDel-s022.html">"ZbZdruDel-s022"</a>
+<a href="./VsiZbor-z014.html">"VsiZbor-z014"</a>
+<a href="./VsiZbor-s019.html">"VsiZbor-s019"</a>
+<a href="./DruzPolZb-s020.html">"DruzPolZb-s020"</a>
+<a href="./VsiZbor-z015.html">"VsiZbor-z015"</a>
+<a href="./ZbObc-s020.html">"ZbObc-s020"</a>
+<a href="./ZbZdruDel-s023.html">"ZbZdruDel-s023"</a>
+<a href="./DruzPolZb-s021.html">"DruzPolZb-s021"</a>
+<a href="./VsiZbor-d008.html">"VsiZbor-d008"</a>
+<a href="./VsiZbor-s020.html">"VsiZbor-s020"</a>
+<a href="./ZbObc-s021.html">"ZbObc-s021"</a>
+<a href="./ZbZdruDel-s024.html">"ZbZdruDel-s024"</a>
+<a href="./VsiZbor-s021.html">"VsiZbor-s021"</a>
+<a href="./VsiZbor-s023.html">"VsiZbor-s023"</a>
+<a href="./DruzPolZb-s022.html">"DruzPolZb-s022"</a>
+<a href="./VsiZbor-z016.html">"VsiZbor-z016"</a>
+<a href="./ZbObc-s022.html">"ZbObc-s022"</a>
+<a href="./ZbZdruDel-s025.html">"ZbZdruDel-s025"</a>
+<a href="./VsiZbor-s022.html">"VsiZbor-s022"</a>
+<a href="./ZbZdruDel-s026.html">"ZbZdruDel-s026"</a>
+<a href="./DruzPolZb-s023.html">"DruzPolZb-s023"</a>
+<a href="./VsiZbor-s024.html">"VsiZbor-s024"</a>
+<a href="./ZbObc-s023.html">"ZbObc-s023"</a>
+<a href="./ZbZdruDel-s027.html">"ZbZdruDel-s027"</a>
+<a href="./DruzPolZb-s024.html">"DruzPolZb-s024"</a>
+<a href="./VsiZbor-s025.html">"VsiZbor-s025"</a>
+<a href="./VsiZbor-z017.html">"VsiZbor-z017"</a>
+<a href="./ZbObc-s024.html">"ZbObc-s024"</a>
+<a href="./ZbZdruDel-s028.html">"ZbZdruDel-s028"</a>
+<a href="./DruzPolZb-s025.html">"DruzPolZb-s025"</a>
+<a href="./VsiZbor-z018.html">"VsiZbor-z018"</a>
+<a href="./ZbObc-s025.html">"ZbObc-s025"</a>
+<a href="./ZbZdruDel-s029.html">"ZbZdruDel-s029"</a>
+<a href="./ZbZdruDel-s030.html">"ZbZdruDel-s030"</a>
+<a href="./VsiZbor-s026.html">"VsiZbor-s026"</a>
+<a href="./DruzPolZb-s026.html">"DruzPolZb-s026"</a>
+<a href="./VsiZbor-z019.html">"VsiZbor-z019"</a>
+<a href="./ZbObc-s026.html">"ZbObc-s026"</a>
+<a href="./ZbZdruDel-s031.html">"ZbZdruDel-s031"</a>
+<a href="./DruzPolZb-s027.html">"DruzPolZb-s027"</a>
+<a href="./ZbObc-s027.html">"ZbObc-s027"</a>
+<a href="./ZbZdruDel-s032.html">"ZbZdruDel-s032"</a>
+<a href="./ZbZdruDel-s033.html">"ZbZdruDel-s033"</a>
+<a href="./DruzPolZb-s028.html">"DruzPolZb-s028"</a>
+<a href="./VsiZbor-d009.html">"VsiZbor-d009"</a>
+<a href="./VsiZbor-s027.html">"VsiZbor-s027"</a>
+<a href="./ZbObc-s028.html">"ZbObc-s028"</a>
+<a href="./ZbZdruDel-s034.html">"ZbZdruDel-s034"</a>
+<a href="./DruzPolZb-s029.html">"DruzPolZb-s029"</a>
+<a href="./VsiZbor-z020.html">"VsiZbor-z020"</a>
+<a href="./ZbObc-s029.html">"ZbObc-s029"</a>
+<a href="./ZbZdruDel-s035.html">"ZbZdruDel-s035"</a>
+<a href="./DruzPolZb-s030.html">"DruzPolZb-s030"</a>
+<a href="./ZbObc-s030.html">"ZbObc-s030"</a>
+<a href="./ZbZdruDel-s036.html">"ZbZdruDel-s036"</a>
+<a href="./VsiZbor-d010.html">"VsiZbor-d010"</a>
+<a href="./VsiZbor-z021.html">"VsiZbor-z021"</a>
+<a href="./DruzPolZb-s031.html">"DruzPolZb-s031"</a>
+<a href="./VsiZbor-s028.html">"VsiZbor-s028"</a>
+<a href="./VsiZbor-z022.html">"VsiZbor-z022"</a>
+<a href="./ZbObc-s031.html">"ZbObc-s031"</a>
+<a href="./ZbZdruDel-s037.html">"ZbZdruDel-s037"</a>
+<a href="./VsiZbor-d011.html">"VsiZbor-d011"</a>
+<a href="./DruzPolZb-s032.html">"DruzPolZb-s032"</a>
+<a href="./VsiZbor-s029.html">"VsiZbor-s029"</a>
+<a href="./ZbObc-s032.html">"ZbObc-s032"</a>
+<a href="./ZbZdruDel-s038.html">"ZbZdruDel-s038"</a>
+<a href="./VsiZbor-s030.html">"VsiZbor-s030"</a>
+<a href="./VsiZbor-s031.html">"VsiZbor-s031"</a>
+<a href="./DruzPolZb-s033.html">"DruzPolZb-s033"</a>
+<a href="./ZbObc-s033.html">"ZbObc-s033"</a>
+<a href="./ZbZdruDel-s039.html">"ZbZdruDel-s039"</a>
+<a href="./DruzPolZb-s034.html">"DruzPolZb-s034"</a>
+<a href="./VsiZbor-z023.html">"VsiZbor-z023"</a>
+<a href="./ZbObc-s034.html">"ZbObc-s034"</a>
+<a href="./ZbZdruDel-s040.html">"ZbZdruDel-s040"</a>
+<a href="./DruzPolZb-s035.html">"DruzPolZb-s035"</a>
+<a href="./ZbObc-s035.html">"ZbObc-s035"</a>
+<a href="./ZbZdruDel-s041.html">"ZbZdruDel-s041"</a>
+<a href="./VsiZbor-d012.html">"VsiZbor-d012"</a>
+<a href="./VsiZbor-d013.html">"VsiZbor-d013"</a>
+<a href="./DruzPolZb-s036.html">"DruzPolZb-s036"</a>
+<a href="./VsiZbor-s032.html">"VsiZbor-s032"</a>
+<a href="./ZbObc-s036.html">"ZbObc-s036"</a>
+<a href="./ZbZdruDel-s042.html">"ZbZdruDel-s042"</a>
+<a href="./DruzPolZb-s037.html">"DruzPolZb-s037"</a>
+<a href="./VsiZbor-s033.html">"VsiZbor-s033"</a>
+<a href="./ZbZdruDel-s043.html">"ZbZdruDel-s043"</a>
+<a href="./ZbObc-s037.html">"ZbObc-s037"</a>
+<a href="./ZbObc-s038.html">"ZbObc-s038"</a>
+<a href="./DruzPolZb-s038.html">"DruzPolZb-s038"</a>
+<a href="./VsiZbor-s034.html">"VsiZbor-s034"</a>
+<a href="./ZbZdruDel-s044.html">"ZbZdruDel-s044"</a>
+<a href="./VsiZbor-sl002.html">"VsiZbor-sl002"</a>
+<a href="./DruzPolZb-s039.html">"DruzPolZb-s039"</a>
+<a href="./VsiZbor-s035.html">"VsiZbor-s035"</a>
+<a href="./ZbObc-s039.html">"ZbObc-s039"</a>
+<a href="./ZbZdruDel-s045.html">"ZbZdruDel-s045"</a>
+<a href="./DruzPolZb-s040.html">"DruzPolZb-s040"</a>
+<a href="./ZbObc-s040.html">"ZbObc-s040"</a>
+<a href="./ZbZdruDel-s046.html">"ZbZdruDel-s046"</a>
+<a href="./DruzPolZb-s041.html">"DruzPolZb-s041"</a>
+<a href="./ZbObc-s041.html">"ZbObc-s041"</a>
+<a href="./ZbZdruDel-s047.html">"ZbZdruDel-s047"</a>
+<a href="./DruzPolZb-s042.html">"DruzPolZb-s042"</a>
+<a href="./ZbObc-s042.html">"ZbObc-s042"</a>
+<a href="./ZbZdruDel-s048.html">"ZbZdruDel-s048"</a>
+<a href="./DruzPolZb-s043.html">"DruzPolZb-s043"</a>
+<a href="./ZbObc-s043.html">"ZbObc-s043"</a>
+<a href="./ZbZdruDel-s049.html">"ZbZdruDel-s049"</a>
+<a href="./VsiZbor-d014.html">"VsiZbor-d014"</a>
+<a href="./DruzPolZb-s044.html">"DruzPolZb-s044"</a>
+<a href="./VsiZbor-s036.html">"VsiZbor-s036"</a>
+<a href="./ZbObc-s044.html">"ZbObc-s044"</a>
+<a href="./ZbZdruDel-s050.html">"ZbZdruDel-s050"</a>
+<a href="./VsiZbor-z024.html">"VsiZbor-z024"</a>
+<a href="./DruzPolZb-s046.html">"DruzPolZb-s046"</a>
+<a href="./ZbObc-s046.html">"ZbObc-s046"</a>
+<a href="./ZbZdruDel-s052.html">"ZbZdruDel-s052"</a>
+<a href="./VsiZbor-s037.html">"VsiZbor-s037"</a>
+<a href="./DruzPolZb-s047.html">"DruzPolZb-s047"</a>
+<a href="./VsiZbor-d015.html">"VsiZbor-d015"</a>
+<a href="./ZbObc-s047.html">"ZbObc-s047"</a>
+<a href="./ZbZdruDel-s053.html">"ZbZdruDel-s053"</a>
+<a href="./ZbObc-s048.html">"ZbObc-s048"</a>
+<a href="./ZbZdruDel-s054.html">"ZbZdruDel-s054"</a>
+<a href="./DruzPolZb-s048.html">"DruzPolZb-s048"</a>
+<a href="./DruzPolZb-s049.html">"DruzPolZb-s049"</a>
+<a href="./ZbObc-s049.html">"ZbObc-s049"</a>
+<a href="./ZbZdruDel-s055.html">"ZbZdruDel-s055"</a>
+<a href="./DruzPolZb-s050.html">"DruzPolZb-s050"</a>
+<a href="./ZbObc-s050.html">"ZbObc-s050"</a>
+<a href="./ZbZdruDel-s056.html">"ZbZdruDel-s056"</a>
+
+  
+</div>
+
+<h2>Prikaz sej parlamenta med leti 1990 in 1992</h2>
+<p>Z klikom na gumb "Seje" izberite zeljeno sejo.</p>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()" id="btn_seje">&#9776; Seje</span>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>    <div id="container" style = "margin : 10px"></div>
+
+    <script>    Highcharts.chart('container', {
+
+    chart: {
+        type: 'xrange',
+        zoomType: 'x'
+    },
+    title: {
+        text: 'Potek seje ZbObc-s015'
+    },
+    xAxis: {
+        type: 'datetime'
+    },
+    yAxis: {
+    	scrollbar: {
+            enabled: true
+        },
+        reversed: true
+    },
+    series: [{
+        name: 'Seje',
+         //pointPadding: 10,
+         //groupPadding: 10,
+        borderColor: 'gray',
+        pointWidth: 10,data:[
+{x: Date.UTC(1991,3,19,10,15),
+x2: Date.UTC(1991,3,19,11,5),
+y:0,
+color: '#99e699'},{x: Date.UTC(1991,3,19,11,50),
+x2: Date.UTC(1991,3,19,12,35),
+y:0,
+color: '#99e699'},{x: Date.UTC(1991,3,19,13,35),
+x2: Date.UTC(1991,3,19,15,50),
+y:0,
+color: '#99e699'},{x: Date.UTC(1991,3,19,16,10),
+x2: Date.UTC(1991,3,19,18,5),
+y:0,
+color: '#99e699'}]
+    }]
+
+}); </script>
+    
+    
+    <div id="container_pie" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+	<script>Highcharts.chart('container_pie', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Stevilo besed glede na politicno afiliacijo'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'Drugi',
+            y: 14132,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Koalicija',
+            y: 12790
+        },
+        {
+            name: 'Neznan Govornik',
+            y: 0
+        }]
+    }]
+});	</script>
+	
+	
+	<div id="container_bar" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+    <script>Highcharts.chart('container_bar', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Taksonomija seje ZbObc-s015'
+    },
+    
+    xAxis: {
+        type: 'category'
+    },
+    yAxis: {
+        title: {
+            text: 'Stevilo izgovorjenih besed znotraj taksonomije'
+        }
+
+    },
+    legend: {
+        enabled: false
+    },
+    plotOptions: {
+        series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y}'
+            }
+        }
+    },
+    "series": [
+        {
+            "name": "Besede",
+            "colorByPoint": true,
+            "data": [
+{         	   
+           	  "name": "Poslanska vprasanja in pobude",
+           	  "y": 338
+           	  },{         	   
+           	  "name": "Mediji",
+           	  "y": 2041
+           	  },{         	   
+           	  "name": "Takse in druge dajatve",
+           	  "y": 234
+           	  },{         	   
+           	  "name": "Denacionalizacija in lastninjenje",
+           	  "y": 5057
+           	  },{         	   
+           	  "name": "Zadruge",
+           	  "y": 7629
+           	  },{         	   
+           	  "name": "Denacionalizacija in lastninjenje",
+           	  "y": 213
+           	  },{         	   
+           	  "name": "Seje",
+           	  "y": 151
+           	  },{         	   
+           	  "name": "Denacionalizacija in lastninjenje",
+           	  "y": 362
+           	  },{         	   
+           	  "name": "Negospodarske dejavnosti",
+           	  "y": 344
+           	  },{         	   
+           	  "name": "Denacionalizacija in lastninjenje",
+           	  "y": 10064
+           	  },{         	   
+           	  "name": "Mladina",
+           	  "y": 489
+           	  }            ]
+        }
+    ]
+});</script>
+
+
+<div id="container_ver"></div>
+<script>Highcharts.chart('container_ver', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Vizualizacija brezbesedne komunikacije'
+    },
+    
+    xAxis: {
+        type: 'category'
+    },
+    yAxis: {
+        title: {
+            text: 'Stevilo'
+        }
+
+    },
+    legend: {
+        enabled: false
+    },
+    plotOptions: {
+        series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y}'
+            }
+        }
+    },
+    "series": [
+        {
+            "name": "Besede",
+            "colorByPoint": true,
+            "data": [
+            ]
+        }
+    ]
+});
+</script>
+</body>
+
+</html>
